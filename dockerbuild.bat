@@ -1,0 +1,1 @@
+docker build --isolation=process -t phonixbuilder:latest -m 4GB .
