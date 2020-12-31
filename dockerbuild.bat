@@ -1,1 +1,1 @@
-docker build --isolation=process -t phonixbuilder:latest -m 4GB .
+docker build --isolation=process -t phoenixbuilder:latest -m 4GB .

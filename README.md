@@ -1,5 +1,5 @@
-# phonixbuilder
-A docker container for building phonix-firestorm
+# phoenixbuilder
+A docker container for building phoenix-firestorm
 
 ## About
 
@@ -11,9 +11,9 @@ Normaly the normal build steps at https://wiki.firestormviewer.org/fs_compiling_
 To note is that the docker image takes quite some space.
 
 ## Cloning
-You are expected to download this to D:\phonixbuilder
+You are expected to download this to D:\phoenixbuilder
 ```
-git clone https://github.com/devy-null/phonixbuilder D:\phonixbuilder
+git clone https://github.com/devy-null/phoenixbuilder D:\phoenixbuilder
 ```
 
 If you download it to somewhere else, you have to change that path in dockerrun.bat after you cloned it
