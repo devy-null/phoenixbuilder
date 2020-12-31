@@ -3,7 +3,7 @@ A docker container for building phonix-firestorm
 
 ## About
 
-This is for 64 bit windows, nothing else is suported (you could customize it for 32, but that is left as an exercise for the reader :p).
+This is for 64 bit windows, nothing else is supported (you could customize it for 32, but that is left as an exercise for the reader :p).
 And it is for SL and not OpenSim (but you can change that in the build command)
 
 Normaly the normal build steps at https://wiki.firestormviewer.org/fs_compiling_firestorm_windows might work, but if you have lots of different versions of python and visual studio etc installed, it can become messy, and then this project might help out.
@@ -20,11 +20,11 @@ If you download it to somewhere else, you have to change that path in dockerrun.
 
 Install Docker if not installed
 
+The normal docker install requires Hyper-V to be enabled, and if you can't turn it on for some reason (for example if you also run VMWare) you can try the Docker EE:
+
 To install Docker EE (works without Hyper-V)
 https://www.kauffmann.nl/2019/03/04/how-to-install-docker-on-windows-10-without-hyper-v/
 * InstallDockerEE.ps1 is a modified version of above, works without IE
-
-If Hyper-V is not a problem, the normal docker install might work
 
 ## Download the firestorm project
 
@@ -42,7 +42,7 @@ Run dockerrun.bat
 
 Do check that the paths inside are correct in case you have put stuff in other places.
 
-### If you want FMOD
+### If you want FMOD (used for sounds, if you don't have it there is no sound!)
 
 Inside the container
 
