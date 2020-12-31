@@ -49,7 +49,7 @@ Inside the container
 Run "SetUpFMOD.bat" or 
 Run "SetUpFMOD.bat 2.01.02" (where 2.01.02 is the version that we want)
 	
-Enter credentials when prompted (they could also be put inside D:\config\fmodauth.json, as { "username": "<username>", "password": "<password>" })
+Enter credentials when prompted (they could also be put inside D:\config\fmodauth.json, as { "username": "&lt;username&gt;", "password": "&lt;password&gt;" })
 
 Commit the docker image, else you will have to rerun the above steps each time you start the container
 
@@ -60,15 +60,15 @@ Inside the container
 cd C:\\phoenix-firestorm
 set AUTOBUILD_CONFIG_FILE=my_autobuild.xml
 
-Replace the "Private-<your-build-name-here>" with a name for your build, like "Private-My-First-Build"
+Replace the "Private-&lt;your-build-name-here&gt;" with a name for your build, like "Private-My-First-Build"
 
 ### If you have FMOD
 
-autobuild build -A 64 -c ReleaseFS_open -- --fmodstudio --package --no-opensim --avx2 --chan Private-<your-build-name-here> -DLL_TESTS:BOOL=FALSE -DCMAKE_CXX_FLAGS="/EHsc /utf-8"
+autobuild build -A 64 -c ReleaseFS_open -- --fmodstudio --package --no-opensim --avx2 --chan Private-&lt;your-build-name-here&gt; -DLL_TESTS:BOOL=FALSE -DCMAKE_CXX_FLAGS="/EHsc /utf-8"
 
 ### If you don't have FMOD
 
-autobuild build -A 64 -c ReleaseFS_open -- --package --no-opensim --avx2 --chan Private-<your-build-name-here> -DLL_TESTS:BOOL=FALSE -DCMAKE_CXX_FLAGS="/EHsc /utf-8"
+autobuild build -A 64 -c ReleaseFS_open -- --package --no-opensim --avx2 --chan Private-&lt;your-build-name-here&gt; -DLL_TESTS:BOOL=FALSE -DCMAKE_CXX_FLAGS="/EHsc /utf-8"
 
 ## Finalizing
 
