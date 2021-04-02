@@ -61,14 +61,14 @@ Enter credentials when prompted (they could also be put inside D:\config\fmodaut
 Inside the container
 
 ```
-cd C:\\phoenix-firestorm <br>
+cd C:\\phoenix-firestorm
 set AUTOBUILD_CONFIG_FILE=my_autobuild.xml
 ```
 
 Replace the "Private-&lt;your-build-name-here&gt;" with a name for your build, like "Private-My-First-Build"
 
 ```
-autobuild build -A 64 -c ReleaseFS_open -- --fmodstudio --package --no-opensim --avx2 --chan Private-&lt;your-build-name-here&gt; -DLL_TESTS:BOOL=FALSE -DCMAKE_CXX_FLAGS="/EHsc /utf-8" --address-size=64
+autobuild build -A 64 -c ReleaseFS_open -- --fmodstudio --package --no-opensim --avx2 --chan Private-<your-build-name-here> -DLL_TESTS:BOOL=FALSE -DCMAKE_CXX_FLAGS="/EHsc /utf-8" --address-size=64
 ```
 
 Commit the docker image, else you will have to rerun the above steps each time you start the container
