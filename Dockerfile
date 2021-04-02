@@ -38,6 +38,10 @@ start /wait C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache \
 	--includeRecommended \
  || IF "%ERRORLEVEL%"=="3010" EXIT 0
 
+RUN powershell -Command "Invoke-WebRequest -UserAgent 'DockerCI' -OutFile C:\\TEMP\\nsis-3.06.1.zip https://sourceforge.net/projects/nsis/files/NSIS%203/3.06.1/nsis-3.06.1.zip/download" && \
+mkdir "C:/Program Files (x86)/NSIS" && \
+tar -xf C:\\TEMP\\nsis-3.06.1.zip -C"C:/Program Files (x86)/NSIS" --strip-components=1
+
 RUN setx AUTOBUILD_VSVER "150"
 
 COPY GetFMOD.py C:\\GetFMOD.py
