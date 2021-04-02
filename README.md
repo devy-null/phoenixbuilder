@@ -61,7 +61,7 @@ Enter credentials when prompted (they could also be put inside D:\config\fmodaut
 Inside the container
 
 ```
-cd C:\\phoenix-firestorm <br>
+cd C:\\phoenix-firestorm
 set AUTOBUILD_CONFIG_FILE=my_autobuild.xml
 ```
 
