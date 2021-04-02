@@ -68,7 +68,7 @@ set AUTOBUILD_CONFIG_FILE=my_autobuild.xml
 Replace the "Private-&lt;your-build-name-here&gt;" with a name for your build, like "Private-My-First-Build"
 
 ```
-autobuild build -A 64 -c ReleaseFS_open -- --fmodstudio --package --no-opensim --avx2 --chan Private-&lt;your-build-name-here&gt; -DLL_TESTS:BOOL=FALSE -DCMAKE_CXX_FLAGS="/EHsc /utf-8"
+autobuild build -A 64 -c ReleaseFS_open -- --fmodstudio --package --no-opensim --avx2 --chan Private-&lt;your-build-name-here&gt; -DLL_TESTS:BOOL=FALSE -DCMAKE_CXX_FLAGS="/EHsc /utf-8" --address-size=64
 ```
 
 Commit the docker image, else you will have to rerun the above steps each time you start the container

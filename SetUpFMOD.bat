@@ -6,8 +6,8 @@ C:\\GetFMOD.py %1
 
 cd 3p-fmodstudio
 set AUTOBUILD_CONFIG_FILE=autobuild.xml
-autobuild build -p windows64 --all
-autobuild package -p windows64 > build.log
+autobuild build -p windows64 --all --address-size=64
+autobuild package -p windows64 --address-size=64 > build.log
 
 findstr /r "^wrote" build.log > wrote
 findstr /r "^md5" build.log > md5
@@ -24,5 +24,5 @@ set md5=%md5: =%
 cd ..\phoenix-firestorm
 cp autobuild.xml my_autobuild.xml
 set AUTOBUILD_CONFIG_FILE=my_autobuild.xml
-autobuild installables edit fmodstudio platform=windows64 hash=%md5% url=file:///%wrote%
+autobuild installables edit fmodstudio platform=windows64 hash=%md5% url=file:///%wrote% --address-size=64
 popd
