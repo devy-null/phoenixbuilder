@@ -5,7 +5,7 @@ import sys, getopt
 import shutil
 import requests
 import getpass
-from requests.auth import HTTPBasicAuth
+import urllib
 
 def read_all(path):
     with open(path, 'r') as in_file:
@@ -39,7 +39,7 @@ Username = ""
 Password = ""
 
 def download():
-	login_response = requests.post(url = LOGIN_URL, auth = HTTPBasicAuth(Username, Password)).json()
+	login_response = requests.post(url = LOGIN_URL, auth = (Username.lower(), urllib.quote(Password.encode('utf8'), safe=u"-_.!~*'()".encode('utf8')))).json()
 	list_response = requests.get(url = LIST_URL, headers = { 'Authorization' : 'FMOD %s' % login_response['token'] }).json()
 
 	fmod_list = next(x for x in list_response['downloads']['categories'] if x['title'] == 'FMOD Studio Suite')
